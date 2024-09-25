@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Tip Calculator</title>
+    <link rel="stylesheet" href="cafeTipCalculator.css">
+</head>
+<body>
+    <div class="container">
+    <div class="container--wrapper">
+        <!--Left Box-->
+        <div class="left box">
+
+            <!--Bill Amount-->
+            <div class="bill-amount item" >
+                <label for="text">Bill Amount</label>
+                <input type="text" name="text" id="billAmount"> 
+            </div>
+
+            <!--Type of tips-->
+            <div class="myRadio">
+                <label for="input" id="nivelDeDeservire">Select Tip</label>
+                <div class="tips--value">
+                    <input type="radio" id="nuMaMaiIntorc" name="type_tip" value="0">
+                    <label for="nuMaMaiIntorc">Nu mă mai întorc - 0%</label>   
+                </div>
+                <div class="tips--value">
+                    <input type="radio" id="prost" name="type_tip" value="10">
+                    <label for="prost">Prost - 10%</label>   
+                </div>
+                <div class="tips--value">
+                    <input type="radio" id="ok" name="type_tip" value="15">
+                    <label for="ok">OK - 15%</label>   
+                </div>
+                <div class="tips--value">
+                    <input type="radio" id="bun" name="type_tip" value="20">
+                    <label for="bun">Bun - 20%</label>   
+                </div>
+                <div class="tips--value">
+                    <input type="radio" id="remarcabil" name="type_tip" value="30">
+                    <label for="remarcabil">Remarcabil - 30%</label>   
+                </div>
+            </div>
+
+            <!--Numbers of people-->
+            <div class="numberOfPeople item" >
+                <label for="numberOfPeople">Number of People</label>
+                <select>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <!--
+                <label for="number">Number of People</label>
+                <input type="number" min="0" name="number"> -->
+            </div>
+
+            <div class="calculate--btn">
+                <input type="button" value="Calculate" id="calcBtn">
+            </div>
+        </div>
+
+        <!--Right Box-->
+        <div class="right box">
+            <div class="wrapper--columns">
+                <div class="column left--col">
+                    <div class="text">
+                        <p>Tip Amount
+                           <br>  <span>/ person</span></p>
+                    </div>
+                    <div class="text">
+                        <p>Total
+                          <br>   <span>/ person</span></p>
+                    </div>
+                </div>
+                <div class="column right--col">
+                    <div class="info--sum">
+                        <p id="tipAmount--perPerson"></p><span>₹</span>
+                    </div>
+                    <div class="info--sum">
+                        <p id="totalAmount--perPerson"></p><span>₹</span>
+                    </div>
+                </div>
+            </div>
+            <div class="reset--btn">
+                <input type="reset" value="Reset" id="resetBtn">
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    <script src="cafeTipCalculator.js"></script>
+</body>
+</html>
